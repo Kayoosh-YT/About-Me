@@ -1,60 +1,73 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kai Miyamoto</title>
+    <title>Kai Miyamoto | Профиль</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">Kai Miyamoto</h1>
-            <div class="controls">
-                <button id="theme-toggle" class="btn">🌓</button>
-                <button id="lang-toggle" class="btn">RU/EN</button>
+    <div class="profile">
+        <!-- Шапка профиля -->
+        <header class="profile-header animate__animated animate__fadeIn">
+            <div class="profile-avatar">
+                <img src="https://via.placeholder.com/150" alt="Kai Miyamoto" class="avatar"> <!-- Замените на свою фотографию -->
             </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="about animate__animated animate__fadeIn">
-            <div class="container">
-                <h2 data-lang="ru">Обо мне</h2>
-                <h2 data-lang="en" style="display: none;">About Me</h2>
-                <p data-lang="ru">Привет, меня зовут Кай Миямото!</p>
-                <p data-lang="en" style="display: none;">Hi, my name is Kai Miyamoto!</p>
-                <p data-lang="ru">Я родился 11 марта 2009 года в Новосибирске и прожил там до 3 лет, потом переехал в Питер. В 7 лет улетел в Японию, где живу до сих пор.</p>
-                <p data-lang="en" style="display: none;">I was born on March 11, 2009, in Novosibirsk and lived there until I was 3, then moved to St. Petersburg. At 7, I flew to Japan, where I still live.</p>
+            <div class="profile-info">
+                <h1>Kai Miyamoto</h1>
+                <p class="bio" data-lang="ru">Крипто-энтузиаст · Разработчик · Любитель SCP</p>
+                <p class="bio" data-lang="en" style="display: none;">Crypto enthusiast · Developer · SCP lover</p>
+                <button id="lang-toggle" class="btn">EN</button>
             </div>
-        </section>
+        </header>
 
-        <section class="interests animate__animated animate__fadeIn">
-            <div class="container">
-                <h2 data-lang="ru">Мои интересы</h2>
-                <h2 data-lang="en" style="display: none;">My Interests</h2>
-                <p data-lang="ru">Я увлекаюсь криптовалютами, инвестирую в разные токены и мечтаю запустить свой. Люблю аниме, Roblox и всё, что связано с SCP.</p>
-                <p data-lang="en" style="display: none;">I'm into cryptocurrencies, invest in various tokens, and dream of launching my own. I love anime, Roblox, and everything related to SCP.</p>
+        <!-- Основной контент -->
+        <main class="profile-content">
+            <!-- "Истории" (кружки) -->
+            <div class="stories">
+                <div class="story" style="background: linear-gradient(45deg, #8a2be2, #ff00ff);">
+                    <span data-lang="ru">Крипто</span>
+                    <span data-lang="en" style="display: none;">Crypto</span>
+                </div>
+                <div class="story" style="background: linear-gradient(45deg, #ff00ff, #00bfff);">
+                    <span data-lang="ru">Аниме</span>
+                    <span data-lang="en" style="display: none;">Anime</span>
+                </div>
+                <div class="story" style="background: linear-gradient(45deg, #00bfff, #8a2be2);">
+                    <span data-lang="ru">Roblox</span>
+                    <span data-lang="en" style="display: none;">Roblox</span>
+                </div>
             </div>
-        </section>
 
-        <section class="skills animate__animated animate__fadeIn">
-            <div class="container">
-                <h2 data-lang="ru">Навыки</h2>
-                <h2 data-lang="en" style="display: none;">Skills</h2>
-                <p data-lang="ru">Я умею писать скрипты для Roblox и создавать веб-приложения.</p>
-                <p data-lang="en" style="display: none;">I can write Roblox scripts and create web applications.</p>
+            <!-- Посты (карточки) -->
+            <div class="posts">
+                <div class="post animate__animated animate__fadeIn">
+                    <h3 data-lang="ru">Обо мне</h3>
+                    <h3 data-lang="en" style="display: none;">About Me</h3>
+                    <p data-lang="ru">Родился в Новосибирске, жил в Питере, сейчас в Японии. Мечтаю создать свой токен!</p>
+                    <p data-lang="en" style="display: none;">Born in Novosibirsk, lived in St. Petersburg, now in Japan. Dreaming of launching my own token!</p>
+                </div>
+
+                <div class="post animate__animated animate__fadeIn">
+                    <h3 data-lang="ru">Мои навыки</h3>
+                    <h3 data-lang="en" style="display: none;">My Skills</h3>
+                    <ul>
+                        <li data-lang="ru">Скрипты для Roblox</li>
+                        <li data-lang="en" style="display: none;">Roblox scripting</li>
+                        <li data-lang="ru">Веб-разработка</li>
+                        <li data-lang="en" style="display: none;">Web development</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
+        </main>
 
-    <footer class="animate__animated animate__fadeInUp">
-        <div class="container">
-            <p data-lang="ru">Свяжитесь со мной, если нужна помощь! (Но если я занят — придётся подождать 😄)</p>
-            <p data-lang="en" style="display: none;">Contact me if you need help! (But if I'm busy, you'll have to wait 😄)</p>
-        </div>
-    </footer>
+        <!-- Футер (как в Instagram) -->
+        <footer class="profile-footer">
+            <p data-lang="ru">Напиши мне в <a href="#" style="color: #bb86fc;">Telegram</a>!</p>
+            <p data-lang="en" style="display: none;">DM me on <a href="#" style="color: #bb86fc;">Telegram</a>!</p>
+        </footer>
+    </div>
 
     <script src="main.js"></script>
 </body>
