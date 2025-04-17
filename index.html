@@ -1,51 +1,112 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kai Miyamoto | NyaFi Gram</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@kayoosh — Профиль</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }.profile-container {
+  background-color: #161b22;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  border: 3px solid #9b5ffb;
+  animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
+}
+
+.user-info h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #9b5ffb;
+  animation: fadeIn 1s ease-out;
+}
+
+.user-info p {
+  margin: 0.2rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.profile-section {
+  margin-top: 1rem;
+  animation: slideUp 0.7s ease-out;
+}
+
+.profile-section h2 {
+  color: #9b5ffb;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotateIn {
+  from { transform: rotate(-360deg); opacity: 0; }
+  to { transform: rotate(0); opacity: 1; }
+}
+
+  </style>
 </head>
 <body>
-    <div class="profile">
-        <!-- Переключатель языка с шуткой -->
-        <button id="lang-toggle" class="lang-btn">т</button>
-
-        <!-- Круглая аватарка -->
-        <div class="avatar-container">
-            <img src="img1.jpg" alt="Kai Miyamoto" class="avatar">
-        </div>
-
-        <!-- Имя и ник -->
-        <h1>Кай Миямото</h1>
-        <p class="username">@kayoosh</p>
-
-        <!-- Статистика -->
-        <div class="stats">
-            <div class="stat">
-                <span class="number">1M</span>
-                <span data-lang="ru">подписчиков</span>
-                <span data-lang="en" style="display: none;">followers</span>
-            </div>
-            <div class="stat">
-                <span class="number">500K</span>
-                <span data-lang="ru">лайков</span>
-                <span data-lang="en" style="display: none;">likes</span>
-            </div>
-        </div>
-
-        <!-- Описание -->
-        <div class="bio">
-            <p data-lang="ru">Крипто-энтузиаст из Японии. Люблю аниме, SCP и создаю токены. Пиши в лс!</p>
-            <p data-lang="en" style="display: none;">Crypto enthusiast from Japan. Love anime, SCP, and token creation. DM me!</p>
-        </div>
-
-        <!-- Кнопка подписаться -->
-        <button class="follow-btn" data-lang="ru">Подписаться</button>
-        <button class="follow-btn" data-lang="en" style="display: none;">Follow</button>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="img1.jpg" alt="Аватар" class="avatar" />
+      <div class="user-info">
+        <h1>@kayoosh</h1>
+        <p>Кай Миямото, 16 лет</p>
+        <p>Новосибирск → Питер → Япония</p>
+      </div>
     </div>
-
-    <script src="main.js"></script>
+    <div class="profile-section">
+      <h2>О себе</h2>
+      <p>Привет, меня зовут Кай Миямото)</p>
+      <p>Я родился 11 марта 2009 года в Новосибирске, прожил там до 3 лет. Потом переехал в Питер, а в 7 лет улетел в Японию, где живу до сих пор.</p>
+      <p>Я интересуюсь криптовалютой, инвестирую небольшие суммы в разные токены и мечтаю запустить свой собственный токен.</p>
+      <p>Кроме того, я увлекаюсь аниме, играю в Роблокс, а также очень люблю тему SCP лабораторий и все, что с этим связано.</p>
+      <p>Я умею писать скрипты для Роблокс и создавать веб-приложения.</p>
+    </div>
+    <div class="profile-section">
+      <h2>Как со мной связаться</h2>
+      <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — можете меня пинговать сколько угодно, я постараюсь ответить, как только смогу!</p>
+    </div>
+  </div>
 </body>
 </html>
