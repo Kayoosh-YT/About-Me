@@ -3,71 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kai Miyamoto | Профиль</title>
+    <title>Kai Miyamoto | NyaFi Gram</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div class="profile">
-        <!-- Шапка профиля -->
-        <header class="profile-header animate__animated animate__fadeIn">
-            <div class="profile-avatar">
-                <img src="https://via.placeholder.com/150" alt="Kai Miyamoto" class="avatar"> <!-- Замените на свою фотографию -->
-            </div>
-            <div class="profile-info">
-                <h1>Kai Miyamoto</h1>
-                <p class="bio" data-lang="ru">Крипто-энтузиаст · Разработчик · Любитель SCP</p>
-                <p class="bio" data-lang="en" style="display: none;">Crypto enthusiast · Developer · SCP lover</p>
-                <button id="lang-toggle" class="btn">EN</button>
-            </div>
-        </header>
+    <!-- 1. Верхняя полоса -->
+    <header class="app-bar">
+        <h1>NyaFi Gram</h1>
+        <button id="lang-toggle" class="lang-btn">EN</button>
+    </header>
 
-        <!-- Основной контент -->
-        <main class="profile-content">
-            <!-- "Истории" (кружки) -->
-            <div class="stories">
-                <div class="story" style="background: linear-gradient(45deg, #8a2be2, #ff00ff);">
-                    <span data-lang="ru">Крипто</span>
-                    <span data-lang="en" style="display: none;">Crypto</span>
-                </div>
-                <div class="story" style="background: linear-gradient(45deg, #ff00ff, #00bfff);">
-                    <span data-lang="ru">Аниме</span>
-                    <span data-lang="en" style="display: none;">Anime</span>
-                </div>
-                <div class="story" style="background: linear-gradient(45deg, #00bfff, #8a2be2);">
-                    <span data-lang="ru">Roblox</span>
-                    <span data-lang="en" style="display: none;">Roblox</span>
-                </div>
-            </div>
+    <!-- 2. Рамка с аватаркой -->
+    <section class="profile-card">
+        <div class="avatar-container">
+            <img src="img1.jpg" alt="Kai Miyamoto" class="avatar">
+        </div>
+        <h2>Кай Миямото</h2>
+        <p class="username">@kayoosh</p>
+    </section>
 
-            <!-- Посты (карточки) -->
-            <div class="posts">
-                <div class="post animate__animated animate__fadeIn">
-                    <h3 data-lang="ru">Обо мне</h3>
-                    <h3 data-lang="en" style="display: none;">About Me</h3>
-                    <p data-lang="ru">Родился в Новосибирске, жил в Питере, сейчас в Японии. Мечтаю создать свой токен!</p>
-                    <p data-lang="en" style="display: none;">Born in Novosibirsk, lived in St. Petersburg, now in Japan. Dreaming of launching my own token!</p>
-                </div>
+    <!-- 3. Происхождение -->
+    <section class="info-section">
+        <h3 data-lang="ru">Откуда я</h3>
+        <h3 data-lang="en" style="display: none;">My Origin</h3>
+        <p data-lang="ru">Родился в Новосибирске, жил в Петербурге, сейчас в Японии. Улетел сюда в 7 лет и остался навсегда!</p>
+        <p data-lang="en" style="display: none;">Born in Novosibirsk, lived in St. Petersburg, now in Japan. Moved here at 7 and stayed forever!</p>
+    </section>
 
-                <div class="post animate__animated animate__fadeIn">
-                    <h3 data-lang="ru">Мои навыки</h3>
-                    <h3 data-lang="en" style="display: none;">My Skills</h3>
-                    <ul>
-                        <li data-lang="ru">Скрипты для Roblox</li>
-                        <li data-lang="en" style="display: none;">Roblox scripting</li>
-                        <li data-lang="ru">Веб-разработка</li>
-                        <li data-lang="en" style="display: none;">Web development</li>
-                    </ul>
-                </div>
-            </div>
-        </main>
+    <!-- 4. Разделитель -->
+    <div class="divider"></div>
 
-        <!-- Футер (как в Instagram) -->
-        <footer class="profile-footer">
-            <p data-lang="ru">Напиши мне в <a href="#" style="color: #bb86fc;">Telegram</a>!</p>
-            <p data-lang="en" style="display: none;">DM me on <a href="#" style="color: #bb86fc;">Telegram</a>!</p>
-        </footer>
-    </div>
+    <!-- 5. Интересы -->
+    <section class="info-section">
+        <h3 data-lang="ru">Мои интересы</h3>
+        <h3 data-lang="en" style="display: none;">My Interests</h3>
+        <ul>
+            <li data-lang="ru">Криптовалюты и создание токенов</li>
+            <li data-lang="en" style="display: none;">Cryptocurrencies & token creation</li>
+            <li data-lang="ru">Аниме и SPC-вселенная</li>
+            <li data-lang="en" style="display: none;">Anime & SPC universe</li>
+            <li data-lang="ru">Разработка в Roblox</li>
+            <li data-lang="en" style="display: none;">Roblox development</li>
+        </ul>
+    </section>
+
+    <!-- 6. Навыки -->
+    <section class="info-section">
+        <h3 data-lang="ru">Мои навыки</h3>
+        <h3 data-lang="en" style="display: none;">My Skills</h3>
+        <ul>
+            <li data-lang="ru">Скрипты на Lua для Roblox</li>
+            <li data-lang="en" style="display: none;">Lua scripting for Roblox</li>
+            <li data-lang="ru">Веб-разработка (HTML/CSS/JS)</li>
+            <li data-lang="en" style="display: none;">Web development (HTML/CSS/JS)</li>
+        </ul>
+    </section>
+
+    <!-- 7. Разделитель -->
+    <div class="divider"></div>
+
+    <!-- 8. Соцсети -->
+    <section class="social-links">
+        <a href="#" class="social-btn github">GitHub</a>
+        <a href="#" class="social-btn discord">Discord</a>
+        <a href="#" class="social-btn youtube">YouTube</a>
+        <a href="#" class="social-btn instagram">Instagram</a>
+        <a href="#" class="social-btn tiktok">TikTok</a>
+    </section>
 
     <script src="main.js"></script>
 </body>
