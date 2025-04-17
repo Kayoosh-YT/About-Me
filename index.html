@@ -5,103 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai Miyamoto | NyaFi Gram</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 1. Верхняя полоса с неоновым эффектом -->
-    <header class="app-bar">
-        <h1 class="neon-text">NyaFi Gram</h1>
-        <button id="lang-toggle" class="lang-btn pulse">EN</button>
-    </header>
+    <div class="profile">
+        <!-- Переключатель языка с шуткой -->
+        <button id="lang-toggle" class="lang-btn">т</button>
 
-    <!-- 2. Аватарка с градиентной обводкой -->
-    <section class="profile-card">
-        <div class="avatar-container glow">
+        <!-- Круглая аватарка -->
+        <div class="avatar-container">
             <img src="img1.jpg" alt="Kai Miyamoto" class="avatar">
         </div>
-        <h2 class="neon-text">Кай Миямото</h2>
+
+        <!-- Имя и ник -->
+        <h1>Кай Миямото</h1>
         <p class="username">@kayoosh</p>
-    </section>
 
-    <!-- 3. Происхождение с иконкой -->
-    <section class="info-section slide-in">
-        <div class="section-header">
-            <span class="icon">🌍</span>
-            <h3 data-lang="ru">Моя история</h3>
-            <h3 data-lang="en" style="display: none;">My Journey</h3>
+        <!-- Статистика -->
+        <div class="stats">
+            <div class="stat">
+                <span class="number">1M</span>
+                <span data-lang="ru">подписчиков</span>
+                <span data-lang="en" style="display: none;">followers</span>
+            </div>
+            <div class="stat">
+                <span class="number">500K</span>
+                <span data-lang="ru">лайков</span>
+                <span data-lang="en" style="display: none;">likes</span>
+            </div>
         </div>
-        <p data-lang="ru">Родился в Новосибирске и в возрасте 3 лет переехал в Питер, а оттуда в 6 лет свалил В Японию где сейчас и нахожусь) </p>
-        <p data-lang="en" style="display: none;">I was born in Novosibirsk and at the age of 3 moved to St. Petersburg, and from there at the age of 6 I left for Japan, where I am now) </p>
-    </section>
 
-    <!-- 4. Разделитель с анимацией -->
-    <div class="divider ripple"></div>
-
-    <!-- 5. Интересы с иконками -->
-    <section class="info-section slide-in">
-        <div class="section-header">
-            <span class="icon">❤️</span>
-            <h3 data-lang="ru">Мои интересы</h3>
-            <h3 data-lang="en" style="display: none;">My Interests</h3>
+        <!-- Описание -->
+        <div class="bio">
+            <p data-lang="ru">Крипто-энтузиаст из Японии. Люблю аниме, SCP и создаю токены. Пиши в лс!</p>
+            <p data-lang="en" style="display: none;">Crypto enthusiast from Japan. Love anime, SCP, and token creation. DM me!</p>
         </div>
-        <ul class="animated-list">
-            <li data-lang="ru"><span class="emoji">💰</span> Криптовалюты и создание токенов</li>
-            <li data-lang="en" style="display: none;"><span class="emoji">💰</span> Cryptocurrencies & token creation</li>
-            <li data-lang="ru"><span class="emoji">🎌</span> Аниме и SPC-вселенная</li>
-            <li data-lang="en" style="display: none;"><span class="emoji">🎌</span> Anime & SPC universe</li>
-            <li data-lang="ru"><span class="emoji">🎮</span> Разработка в Roblox</li>
-            <li data-lang="en" style="display: none;"><span class="emoji">🎮</span> Roblox development</li>
-        </ul>
-    </section>
 
-    <!-- 6. Навыки с прогресс-баром -->
-    <section class="info-section slide-in">
-        <div class="section-header">
-            <span class="icon">⚡</span>
-            <h3 data-lang="ru">Мои навыки</h3>
-            <h3 data-lang="en" style="display: none;">My Skills</h3>
-        </div>
-        <div class="skill">
-            <span data-lang="ru">Lua (Roblox)</span>
-            <span data-lang="en" style="display: none;">Lua (Roblox)</span>
-            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-        </div>
-        <div class="skill">
-            <span data-lang="ru">Веб-разработка</span>
-            <span data-lang="en" style="display: none;">Web Dev</span>
-            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
-    </section>
-
-    <!-- 7. Разделитель -->
-    <div class="divider ripple"></div>
-
-    <!-- 8. Соцсети с hover-эффектом -->
-    <section class="social-links">
-        <a href="#" class="social-btn github hover-effect">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
-            GitHub
-        </a>
-        <a href="#" class="social-btn discord hover-effect">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord">
-            Discord
-        </a>
-        <a href="#" class="social-btn youtube hover-effect">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube">
-            YouTube
-        </a>
-        <a href="#" class="social-btn instagram hover-effect">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-            Instagram
-        </a>
-        <a href="#" class="social-btn tiktok hover-effect">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok">
-            TikTok
-        </a>
-    </section>
-
-    <!-- Фон из частиц -->
-    <div class="particles"></div>
+        <!-- Кнопка подписаться -->
+        <button class="follow-btn" data-lang="ru">Подписаться</button>
+        <button class="follow-btn" data-lang="en" style="display: none;">Follow</button>
+    </div>
 
     <script src="main.js"></script>
 </body>
