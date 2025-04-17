@@ -5,71 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kai Miyamoto | NyaFi Gram</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 1. Верхняя полоса -->
+    <!-- 1. Верхняя полоса с неоновым эффектом -->
     <header class="app-bar">
-        <h1>NyaFi Gram</h1>
-        <button id="lang-toggle" class="lang-btn">EN</button>
+        <h1 class="neon-text">NyaFi Gram</h1>
+        <button id="lang-toggle" class="lang-btn pulse">EN</button>
     </header>
 
-    <!-- 2. Рамка с аватаркой -->
+    <!-- 2. Аватарка с градиентной обводкой -->
     <section class="profile-card">
-        <div class="avatar-container">
+        <div class="avatar-container glow">
             <img src="img1.jpg" alt="Kai Miyamoto" class="avatar">
         </div>
-        <h2>Кай Миямото</h2>
+        <h2 class="neon-text">Кай Миямото</h2>
         <p class="username">@kayoosh</p>
     </section>
 
-    <!-- 3. Происхождение -->
-    <section class="info-section">
-        <h3 data-lang="ru">Откуда я</h3>
-        <h3 data-lang="en" style="display: none;">My Origin</h3>
-        <p data-lang="ru">Родился в Новосибирске, жил в Петербурге, сейчас в Японии. Улетел сюда в 7 лет и остался навсегда!</p>
-        <p data-lang="en" style="display: none;">Born in Novosibirsk, lived in St. Petersburg, now in Japan. Moved here at 7 and stayed forever!</p>
+    <!-- 3. Происхождение с иконкой -->
+    <section class="info-section slide-in">
+        <div class="section-header">
+            <span class="icon">🌍</span>
+            <h3 data-lang="ru">Моя история</h3>
+            <h3 data-lang="en" style="display: none;">My Journey</h3>
+        </div>
+        <p data-lang="ru">Родился в Новосибирске и в возрасте 3 лет переехал в Питер, а оттуда в 6 лет свалил В Японию где сейчас и нахожусь) </p>
+        <p data-lang="en" style="display: none;">I was born in Novosibirsk and at the age of 3 moved to St. Petersburg, and from there at the age of 6 I left for Japan, where I am now) </p>
     </section>
 
-    <!-- 4. Разделитель -->
-    <div class="divider"></div>
+    <!-- 4. Разделитель с анимацией -->
+    <div class="divider ripple"></div>
 
-    <!-- 5. Интересы -->
-    <section class="info-section">
-        <h3 data-lang="ru">Мои интересы</h3>
-        <h3 data-lang="en" style="display: none;">My Interests</h3>
-        <ul>
-            <li data-lang="ru">Криптовалюты и создание токенов</li>
-            <li data-lang="en" style="display: none;">Cryptocurrencies & token creation</li>
-            <li data-lang="ru">Аниме и SPC-вселенная</li>
-            <li data-lang="en" style="display: none;">Anime & SPC universe</li>
-            <li data-lang="ru">Разработка в Roblox</li>
-            <li data-lang="en" style="display: none;">Roblox development</li>
+    <!-- 5. Интересы с иконками -->
+    <section class="info-section slide-in">
+        <div class="section-header">
+            <span class="icon">❤️</span>
+            <h3 data-lang="ru">Мои интересы</h3>
+            <h3 data-lang="en" style="display: none;">My Interests</h3>
+        </div>
+        <ul class="animated-list">
+            <li data-lang="ru"><span class="emoji">💰</span> Криптовалюты и создание токенов</li>
+            <li data-lang="en" style="display: none;"><span class="emoji">💰</span> Cryptocurrencies & token creation</li>
+            <li data-lang="ru"><span class="emoji">🎌</span> Аниме и SPC-вселенная</li>
+            <li data-lang="en" style="display: none;"><span class="emoji">🎌</span> Anime & SPC universe</li>
+            <li data-lang="ru"><span class="emoji">🎮</span> Разработка в Roblox</li>
+            <li data-lang="en" style="display: none;"><span class="emoji">🎮</span> Roblox development</li>
         </ul>
     </section>
 
-    <!-- 6. Навыки -->
-    <section class="info-section">
-        <h3 data-lang="ru">Мои навыки</h3>
-        <h3 data-lang="en" style="display: none;">My Skills</h3>
-        <ul>
-            <li data-lang="ru">Скрипты на Lua для Roblox</li>
-            <li data-lang="en" style="display: none;">Lua scripting for Roblox</li>
-            <li data-lang="ru">Веб-разработка (HTML/CSS/JS)</li>
-            <li data-lang="en" style="display: none;">Web development (HTML/CSS/JS)</li>
-        </ul>
+    <!-- 6. Навыки с прогресс-баром -->
+    <section class="info-section slide-in">
+        <div class="section-header">
+            <span class="icon">⚡</span>
+            <h3 data-lang="ru">Мои навыки</h3>
+            <h3 data-lang="en" style="display: none;">My Skills</h3>
+        </div>
+        <div class="skill">
+            <span data-lang="ru">Lua (Roblox)</span>
+            <span data-lang="en" style="display: none;">Lua (Roblox)</span>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+            <span data-lang="ru">Веб-разработка</span>
+            <span data-lang="en" style="display: none;">Web Dev</span>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        </div>
     </section>
 
     <!-- 7. Разделитель -->
-    <div class="divider"></div>
+    <div class="divider ripple"></div>
 
-    <!-- 8. Соцсети -->
+    <!-- 8. Соцсети с hover-эффектом -->
     <section class="social-links">
-        <a href="#" class="social-btn github">GitHub</a>
-        <a href="#" class="social-btn discord">Discord</a>
-        <a href="#" class="social-btn youtube">YouTube</a>
-        <a href="#" class="social-btn instagram">Instagram</a>
-        <a href="#" class="social-btn tiktok">TikTok</a>
+        <a href="#" class="social-btn github hover-effect">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            GitHub
+        </a>
+        <a href="#" class="social-btn discord hover-effect">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord">
+            Discord
+        </a>
+        <a href="#" class="social-btn youtube hover-effect">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube">
+            YouTube
+        </a>
+        <a href="#" class="social-btn instagram hover-effect">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            Instagram
+        </a>
+        <a href="#" class="social-btn tiktok hover-effect">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok">
+            TikTok
+        </a>
     </section>
+
+    <!-- Фон из частиц -->
+    <div class="particles"></div>
 
     <script src="main.js"></script>
 </body>
