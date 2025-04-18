@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@kayoosh — Профиль</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -15,142 +15,149 @@
       justify-content: center;
       align-items: flex-start;
       min-height: 100vh;
-      padding: 2rem 0;
-    }.ad-left, .ad-right {
-  position: fixed;
-  top: 20px;
-  width: 120px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
+      padding: 2rem 140px; /* отступы для баннеров */
+    }
 
-.ad-left {
-  left: 0;
-}
+    .ad-left-fixed, .ad-right-fixed {
+      position: fixed;
+      top: 20px;
+      width: 120px;
+      height: 600px;
+      z-index: 999;
+    }
 
-.ad-right {
-  right: 0;
-}
+    .ad-left-fixed { left: 0; }
+    .ad-right-fixed { right: 0; }
 
-.profile-container {
-  background-color: #161b22;
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
-}
+    .profile-container {
+      background-color: #161b22;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
+    }
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-out;
-}
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 1.5rem;
-  border: 3px solid #9b5ffb;
-  animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
-}
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      border: 3px solid #9b5ffb;
+      animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
+    }
 
-.user-info h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #9b5ffb;
-  animation: fadeIn 1s ease-out;
-}
+    .user-info h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #9b5ffb;
+    }
 
-.user-info p {
-  margin: 0.2rem 0;
-  animation: fadeIn 1s ease-out;
-}
+    .profile-section {
+      margin-top: 1rem;
+    }
 
-.profile-section {
-  margin-top: 1rem;
-  animation: slideUp 0.7s ease-out;
-}
+    .profile-section h2 {
+      color: #9b5ffb;
+      margin-bottom: 0.5rem;
+    }
 
-.profile-section h2 {
-  color: #9b5ffb;
-  margin-bottom: 0.5rem;
-  animation: fadeIn 1s ease-out;
-}
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
 
-.social-links {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1.5rem;
-}
+    .social-buttons a {
+      flex: 1 1 48%;
+      margin: 6px 4px;
+      background-color: #9b5ffb;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
 
-.social-links a {
-  color: #9b5ffb;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
+    .social-buttons a:hover {
+      background-color: #b383ff;
+      transform: scale(1.05);
+    }
 
-.social-links a:hover {
-  transform: scale(1.2);
-  color: #c084fc;
-}
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #0d1117;
+      border-top: 1px solid #30363d;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
 
-.bottom-nav {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-around;
-}
+    .nav-bar a {
+      color: #9b5ffb;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.3s;
+    }
 
-.bottom-nav a {
-  background-color: #21262d;
-  color: #c9d1d9;
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.3s ease, transform 0.2s;
-}
+    .nav-bar a:hover {
+      color: #b383ff;
+    }
 
-.bottom-nav a:hover {
-  background-color: #30363d;
-  transform: translateY(-2px);
-}
+    .nav-bar i {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-@keyframes popIn {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1); }
+    }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-@keyframes rotateIn {
-  from { transform: rotate(-360deg); opacity: 0; }
-  to { transform: rotate(0); opacity: 1; }
-}
-
+    @keyframes rotateIn {
+      from { transform: rotate(-360deg); opacity: 0; }
+      to { transform: rotate(0); opacity: 1); }
+    }
   </style>
 </head>
 <body>
-  <div class="ad-left">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  </div>  <div class="profile-container">
+
+  <!-- Баннеры -->
+  <div class="ad-left-fixed">
+    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  </div>
+  <div class="ad-right-fixed">
+    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  </div>
+
+  <!-- Контент -->
+  <div class="profile-container">
     <div class="profile-header">
       <img src="img1.jpg" alt="Аватар" class="avatar" />
       <div class="user-info">
@@ -159,6 +166,7 @@
         <p>Новосибирск → Питер → Япония</p>
       </div>
     </div>
+
     <div class="profile-section">
       <h2>О себе</h2>
       <p>Привет, меня зовут Кай Миямото)</p>
@@ -167,29 +175,37 @@
       <p>Кроме того, я увлекаюсь аниме, играю в Роблокс, а также очень люблю тему SCP лабораторий и все, что с этим связано.</p>
       <p>Я умею писать скрипты для Роблокс и создавать веб-приложения.</p>
     </div>
+
     <div class="profile-section">
       <h2>Мои мечты</h2>
-      <p>У меня есть куча идей и проектов, которые я бы хотел реализовать. Я мечтаю набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, потому что мой текущий заказан с AliExpress за 10 000 рублей и еле работает. Я буду очень рад, если вы поддержите меня и кликните на рекламные баннеры на сайте — это поможет мне приблизиться к мечте!</p>
-      <p>Также я планирую развивать эту страницу, превратив её в личный уголок в тёмной сети интернета.</p>
+      <p>У меня есть куча идей и всякого другого, что я бы хотел осуществить.</p>
+      <p>Я хочу набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, потому что мой с AliExpress за 10 000 рублей почти ничего не тянет.</p>
+      <p>Буду искренне рад, если вы понажимаете на рекламные баннеры на страницах — это поможет приблизить мою мечту!</p>
+      <p>А ещё я собираюсь продолжать развивать эту страницу и превратить её в мой личный уголок в тёмной сети интернета.</p>
     </div>
+
     <div class="profile-section">
-      <h2>Как со мной связаться</h2>
-      <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — можете меня пинговать сколько угодно, я постараюсь ответить, как только смогу!</p>
+      <h2>Соцсети</h2>
+      <div class="social-buttons">
+        <a href="https://youtube.com/@kayoosh_yt" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="https://www.instagram.com/kayoosh_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://github.com/kayoosh2009" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://discord.gg/K76vqDHn2v" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+        <a href="https://steamcommunity.com/profiles/76561199802693516/" target="_blank"><i class="fab fa-steam"></i> Steam</a>
+      </div>
     </div>
-    <div class="profile-section social-links">
-      <a href="https://youtube.com/@kayoosh_yt" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/kayoosh_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/kayoosh2009" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://discord.gg/K76vqDHn2v" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-      <a href="https://steamcommunity.com/profiles/76561199802693516/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
+
+    <div class="profile-section">
+      <h2>Связь</h2>
+      <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — пингуйте сколько угодно, я постараюсь ответить, как только смогу!</p>
     </div>
-    <div class="bottom-nav">
-      <a href="index.html"><i class="fas fa-home"></i> Главная</a>
-      <a href="games.html"><i class="fas fa-gamepad"></i> Игры</a>
-      <a href="chat.html"><i class="fas fa-comments"></i> Чат</a>
-    </div>
-  </div>  <div class="ad-right">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  </div>
+
+  <!-- Навигация -->
+  <div class="nav-bar">
+    <a href="index.html"><i class="fas fa-home"></i>Главная</a>
+    <a href="games.html"><i class="fas fa-gamepad"></i>Игры</a>
+    <a href="chat.html"><i class="fas fa-comments"></i>Чат</a>
   </div>
 </body>
 </html>
