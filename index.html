@@ -1,10 +1,10 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@kayoosh — Профиль</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRMfRLkwmo9WvD2Z7V4S+cYVQ0hH8ScFj+mjvHtrG++z6oEKNXzJbR2T8vw8hz9Fke2E2pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       margin: 0;
@@ -12,128 +12,143 @@
       background-color: #0d1117;
       color: #c9d1d9;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
       min-height: 100vh;
-      padding: 2rem 0 5rem 0;
-    }.ad-left, .ad-right {
-  width: 120px;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      padding-bottom: 80px;
+    }
 
-.ad-left {
-  margin-right: 1rem;
-}
+    .ad-left, .ad-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 120px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.ad-right {
-  margin-left: 1rem;
-}
+    .ad-left {
+      left: 0;
+    }
 
-.profile-container {
-  background-color: #161b22;
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
-}
+    .ad-right {
+      right: 0;
+    }
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-out;
-}
+    .profile-container {
+      background-color: #161b22;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      margin: 2rem 140px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
+    }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 1.5rem;
-  border: 3px solid #9b5ffb;
-  animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
-}
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-out;
+    }
 
-.user-info h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #9b5ffb;
-  animation: fadeIn 1s ease-out;
-}
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      border: 3px solid #9b5ffb;
+      animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
+    }
 
-.user-info p {
-  margin: 0.2rem 0;
-  animation: fadeIn 1s ease-out;
-}
+    .user-info h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #9b5ffb;
+      animation: fadeIn 1s ease-out;
+    }
 
-.profile-section {
-  margin-top: 1rem;
-  animation: slideUp 0.7s ease-out;
-}
+    .user-info p {
+      margin: 0.2rem 0;
+      animation: fadeIn 1s ease-out;
+    }
 
-.profile-section h2 {
-  color: #9b5ffb;
-  margin-bottom: 0.5rem;
-  animation: fadeIn 1s ease-out;
-}
+    .profile-section {
+      margin-top: 1rem;
+      animation: slideUp 0.7s ease-out;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+    .profile-section h2 {
+      color: #9b5ffb;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 1s ease-out;
+    }
 
-@keyframes popIn {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #161b22;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #30363d;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    .bottom-nav a {
+      color: #9b5ffb;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
 
-@keyframes rotateIn {
-  from { transform: rotate(-360deg); opacity: 0; }
-  to { transform: rotate(0); opacity: 1; }
-}
+    .bottom-nav a:hover {
+      transform: scale(1.1);
+    }
 
-.footer-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #161b22;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  border-top: 1px solid #30363d;
-}
+    .bottom-nav i {
+      font-size: 1.2rem;
+      margin-bottom: 3px;
+    }
 
-.footer-nav a {
-  color: #9b5ffb;
-  text-decoration: none;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-.footer-nav a:hover {
-  color: #d19bff;
-}
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
 
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes rotateIn {
+      from { transform: rotate(-360deg); opacity: 0; }
+      to { transform: rotate(0); opacity: 1; }
+    }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="ad-left">
     <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  </div>  <div class="profile-container">
+  </div>
+
+  <div class="profile-container">
     <div class="profile-header">
       <img src="img1.jpg" alt="Аватар" class="avatar" />
       <div class="user-info">
@@ -150,16 +165,29 @@
       <p>Кроме того, я увлекаюсь аниме, играю в Роблокс, а также очень люблю тему SCP лабораторий и все, что с этим связано.</p>
       <p>Я умею писать скрипты для Роблокс и создавать веб-приложения.</p>
     </div>
+
+    <div class="profile-section">
+      <h2>Мои мечты</h2>
+      <p>У меня есть куча идей и всякого другого, которое я бы хотел осуществить.</p>
+      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой комп с Алиэкспресс за 10 000 рублей практически ничего не тянет.</p>
+      <p>Поэтому я буду искренне рад, если вы понажимаете на рекламные баннеры на странице — это поможет осуществить мою мечту!</p>
+      <p>Кстати, чтобы на этой странице было намного интереснее, я собираюсь продолжать её создание и превратить этот сайт во что-то вроде моего личного уголка в этой тёмной сети интернета.</p>
+    </div>
+
     <div class="profile-section">
       <h2>Как со мной связаться</h2>
       <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — можете меня пинговать сколько угодно, я постараюсь ответить, как только смогу!</p>
     </div>
-  </div>  <div class="ad-right">
+  </div>
+
+  <div class="ad-right">
     <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  </div>  <div class="footer-nav">
-    <a href="index.html"><i class="fas fa-home"></i> Главная</a>
-    <a href="games.html"><i class="fas fa-gamepad"></i> Игры</a>
-    <a href="chat.html"><i class="fas fa-comments"></i> Чат</a>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="index.html"><i class="fas fa-home"></i>Главная</a>
+    <a href="games.html"><i class="fas fa-gamepad"></i>Игры</a>
+    <a href="chat.html"><i class="fas fa-comments"></i>Чат</a>
   </div>
 </body>
 </html>
