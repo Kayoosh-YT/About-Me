@@ -14,7 +14,7 @@
       justify-content: center;
       align-items: flex-start;
       min-height: 100vh;
-      padding: 2rem 0;
+      padding: 2rem 0 4rem;
     }.ad-left, .ad-right {
   width: 120px;
   height: 600px;
@@ -80,6 +80,32 @@
   animation: fadeIn 1s ease-out;
 }
 
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #161b22;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.footer-nav a {
+  color: #9b5ffb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  transform: scale(1.1);
+  color: #d1aaff;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
@@ -128,13 +154,17 @@
     </div>
     <div class="profile-section">
       <h2>Мои мечты</h2>
-      <p>У меня есть куча идей и всего прочего, что я хотел бы реализовать.</p>
-      <p>Я мечтаю набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, потому что мой нынешний с Алиэкспресс за 10 000 рублей почти ничего не тянет.</p>
-      <p>Поэтому я буду искренне рад, если вы понажимаете на рекламные баннеры на странице — это поможет приблизить мою мечту!</p>
-      <p>Кстати, чтобы эта страница стала ещё интереснее, я собираюсь её развивать и превратить сайт в нечто вроде моего личного уголка в этой тёмной сети интернета.</p>
+      <p>У меня есть куча идей и всякого другого, которое я бы хотел осуществить.</p>
+      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой комп с AliExpress за 10 000 рублей практически ничего не тянет.</p>
+      <p>Поэтому я буду искренне рад, если вы понажимаете на рекламные баннеры на странице, чтобы помочь мне осуществить мечту!</p>
+      <p>Кстати, для того чтобы на этой странице было намного интереснее, я собираюсь продолжать её создание, чтобы превратить этот сайт в мой личный уголок в этой тёмной сети интернета.</p>
     </div>
   </div>  <div class="ad-right">
     <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+  </div>  <div class="footer-nav">
+    <a href="index.html">Главная</a>
+    <a href="games.html">Игры</a>
+    <a href="chat.html">Чат</a>
   </div>
 </body>
 </html>
