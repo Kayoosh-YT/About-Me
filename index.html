@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@kayoosh — Профиль</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -17,13 +18,12 @@
       padding: 2rem 0;
     }.ad-left, .ad-right {
   position: fixed;
-  top: 0;
+  top: 20px;
   width: 120px;
   height: 600px;
   display: flex;
   justify-content: center;
-  align-items: start;
-  padding-top: 1rem;
+  align-items: flex-start;
 }
 
 .ad-left {
@@ -40,7 +40,6 @@
   padding: 2rem;
   max-width: 600px;
   width: 100%;
-  margin: 0 140px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
 }
@@ -84,38 +83,46 @@
   animation: fadeIn 1s ease-out;
 }
 
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: #161b22;
+.social-links {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  border-top: 1px solid #30363d;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  color: #9b5ffb;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #c084fc;
+}
+
+.bottom-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 .bottom-nav a {
-  color: #9b5ffb;
+  background-color: #21262d;
+  color: #c9d1d9;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
   text-decoration: none;
-  text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  transition: transform 0.2s;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .bottom-nav a:hover {
-  transform: scale(1.1);
-}
-
-.bottom-nav i {
-  font-size: 1.2rem;
-  margin-bottom: 3px;
+  background-color: #30363d;
+  transform: translateY(-2px);
 }
 
 @keyframes fadeIn {
@@ -139,7 +146,6 @@
 }
 
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="ad-left">
@@ -163,21 +169,27 @@
     </div>
     <div class="profile-section">
       <h2>Мои мечты</h2>
-      <p>У меня есть куча идей и всякого другого, которое я бы хотел осуществить.</p>
-      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой комп с Алиэкспресс за 10 000 рублей практически ничего не тянет.</p>
-      <p>Поэтому я буду искренне рад, если вы понажимаете на рекламные баннеры на странице — это поможет осуществить мою мечту!</p>
-      <p>Кстати, чтобы на этой странице было намного интереснее, я собираюсь продолжать её создание и превратить этот сайт во что-то вроде моего личного уголка в этой тёмной сети интернета.</p>
+      <p>У меня есть куча идей и проектов, которые я бы хотел реализовать. Я мечтаю набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, потому что мой текущий заказан с AliExpress за 10 000 рублей и еле работает. Я буду очень рад, если вы поддержите меня и кликните на рекламные баннеры на сайте — это поможет мне приблизиться к мечте!</p>
+      <p>Также я планирую развивать эту страницу, превратив её в личный уголок в тёмной сети интернета.</p>
     </div>
     <div class="profile-section">
       <h2>Как со мной связаться</h2>
       <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — можете меня пинговать сколько угодно, я постараюсь ответить, как только смогу!</p>
     </div>
+    <div class="profile-section social-links">
+      <a href="https://youtube.com/@kayoosh_yt" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/kayoosh_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/kayoosh2009" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://discord.gg/K76vqDHn2v" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+      <a href="https://steamcommunity.com/profiles/76561199802693516/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
+    </div>
+    <div class="bottom-nav">
+      <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+      <a href="games.html"><i class="fas fa-gamepad"></i> Игры</a>
+      <a href="chat.html"><i class="fas fa-comments"></i> Чат</a>
+    </div>
   </div>  <div class="ad-right">
     <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  </div>  <div class="bottom-nav">
-    <a href="index.html"><i class="fas fa-home"></i>Главная</a>
-    <a href="games.html"><i class="fas fa-gamepad"></i>Игры</a>
-    <a href="chat.html"><i class="fas fa-comments"></i>Чат</a>
   </div>
 </body>
 </html>
