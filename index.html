@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1024" />
   <title>@kayoosh — Профиль</title>
+  <meta name="coinzilla" content="f57fac0c98bfbeae52ae830dc8c7ba30" />
+  <script src="https://coinzillatag.com/lib/display.js"></script>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -20,13 +22,11 @@
 
     .ad-left, .ad-right {
       position: fixed;
-      top: 0;
+      top: 20px;
       width: 120px;
-      height: 600px;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      z-index: 999;
+      flex-direction: column;
+      align-items: center;
     }
 
     .ad-left {
@@ -45,13 +45,13 @@
       width: 100%;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       animation: fadeIn 1s ease-out, slideUp 0.7s ease-out;
-      z-index: 1;
     }
 
     .profile-header {
       display: flex;
       align-items: center;
       margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-out;
     }
 
     .avatar {
@@ -82,57 +82,44 @@
       margin-bottom: 0.5rem;
     }
 
-    .social-buttons {
+    .footer-nav {
       margin-top: 2rem;
       display: flex;
+      justify-content: space-around;
+      background-color: #13161c;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .footer-nav a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+      display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 1rem;
       justify-content: center;
     }
 
-    .social-buttons a {
-      text-decoration: none;
-      color: white;
+    .social-links a {
       background-color: #9b5ffb;
-      padding: 10px 15px;
+      color: white;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .social-buttons a:hover {
-      background-color: #b481ff;
-    }
-
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #161b22;
-      display: flex;
-      gap: 30px;
-      padding: 10px 20px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
-      z-index: 999;
-    }
-
-    .bottom-nav a {
       text-decoration: none;
-      color: #9b5ffb;
       font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    .bottom-nav a:hover {
-      color: #b481ff;
+    .social-links a:hover {
+      background-color: #7c3aed;
     }
 
     @keyframes fadeIn {
@@ -158,7 +145,8 @@
 </head>
 <body>
   <div class="ad-left">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    <div class="coinzilla" style="margin-top: 10px;"></div>
   </div>
 
   <div class="profile-container">
@@ -182,34 +170,35 @@
 
     <div class="profile-section">
       <h2>Мои мечты</h2>
-      <p>У меня есть куча идей и всякого другого, которое я бы хотел осуществить.</p>
-      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой с AliExpress за 10 000₽ практически ничего не тянет.</p>
-      <p>Поэтому я буду искренне рад, если вы понажимаете на рекламные баннеры на страницах, чтобы помочь осуществить мою мечту.</p>
-      <p>Я также собираюсь продолжать развитие этого сайта, чтобы превратить его в личный уголок в этой тёмной сети интернета.</p>
+      <p>У меня есть куча идей и всякого другого, что я бы хотел осуществить.</p>
+      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой комп с Алиэкспресс за 10 000₽ почти ничего не тянет.</p>
+      <p>Поэтому буду искренне рад, если вы покликаете по рекламным баннерам, чтобы помочь мне осуществить мечту!</p>
+      <p>Эта страница будет развиваться — я хочу превратить её в мой личный уголок в этой тёмной сети интернета.</p>
     </div>
 
     <div class="profile-section">
-      <h2>Связь со мной</h2>
-      <p>Я всегда рад помочь! Если я не отвечаю сразу, не переживайте — можете меня пинговать сколько угодно, я постараюсь ответить, как только смогу!</p>
+      <h2>Как со мной связаться</h2>
+      <p>Я всегда рад помочь! Если я не отвечаю сразу — не переживайте, пингуйте сколько угодно, я постараюсь ответить как только смогу!</p>
     </div>
 
-    <div class="social-buttons">
+    <div class="social-links">
       <a href="https://youtube.com/@kayoosh_yt" target="_blank">YouTube</a>
       <a href="https://www.instagram.com/kayoosh_" target="_blank">Instagram</a>
       <a href="https://github.com/kayoosh2009" target="_blank">GitHub</a>
       <a href="https://discord.gg/K76vqDHn2v" target="_blank">Discord</a>
       <a href="https://steamcommunity.com/profiles/76561199802693516/" target="_blank">Steam</a>
     </div>
+
+    <div class="footer-nav">
+      <a href="index.html">🏠 Главная</a>
+      <a href="games.html">🎮 Игры</a>
+      <a href="chat.html">💬 Чат</a>
+    </div>
   </div>
 
   <div class="ad-right">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-  </div>
-
-  <div class="bottom-nav">
-    <a href="index.html">🏠 Главная</a>
-    <a href="games.html">🎮 Игры</a>
-    <a href="chat.html">💬 Чат</a>
+    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+    <div class="coinzilla" style="margin-top: 10px;"></div>
   </div>
 </body>
 </html>
