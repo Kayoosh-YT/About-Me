@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1024" />
   <title>@kayoosh — Профиль</title>
-  <meta name="coinzilla" content="f57fac0c98bfbeae52ae830dc8c7ba30" />
-  <script src="https://coinzillatag.com/lib/display.js"></script>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -25,8 +23,8 @@
       top: 20px;
       width: 120px;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
 
     .ad-left {
@@ -51,7 +49,6 @@
       display: flex;
       align-items: center;
       margin-bottom: 1.5rem;
-      animation: fadeIn 1s ease-out;
     }
 
     .avatar {
@@ -60,7 +57,6 @@
       border-radius: 50%;
       margin-right: 1.5rem;
       border: 3px solid #9b5ffb;
-      animation: popIn 0.6s ease-out, rotateIn 1s ease-out;
     }
 
     .user-info h1 {
@@ -127,26 +123,18 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    @keyframes popIn {
-      from { transform: scale(0); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes rotateIn {
-      from { transform: rotate(-360deg); opacity: 0; }
-      to { transform: rotate(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <div class="ad-left">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-    <div class="coinzilla" style="margin-top: 10px;"></div>
+    <div id="frame" style="width: 120px;">
+      <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+      <a style="display: block; text-align: right; font-size: 12px" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2390656&source_type=ad_unit&partner=2390656">Advertise here</a>
+    </div>
   </div>
 
   <div class="profile-container">
@@ -164,21 +152,20 @@
       <p>Привет, меня зовут Кай Миямото)</p>
       <p>Я родился 11 марта 2009 года в Новосибирске, прожил там до 3 лет. Потом переехал в Питер, а в 7 лет улетел в Японию, где живу до сих пор.</p>
       <p>Я интересуюсь криптовалютой, инвестирую небольшие суммы в разные токены и мечтаю запустить свой собственный токен.</p>
-      <p>Кроме того, я увлекаюсь аниме, играю в Роблокс, а также очень люблю тему SCP лабораторий и все, что с этим связано.</p>
+      <p>Кроме того, я увлекаюсь аниме, играю в Роблокс, а также очень люблю тему SCP лабораторий и всё, что с этим связано.</p>
       <p>Я умею писать скрипты для Роблокс и создавать веб-приложения.</p>
     </div>
 
     <div class="profile-section">
       <h2>Мои мечты</h2>
-      <p>У меня есть куча идей и всякого другого, что я бы хотел осуществить.</p>
-      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер, так как мой комп с Алиэкспресс за 10 000₽ почти ничего не тянет.</p>
-      <p>Поэтому буду искренне рад, если вы покликаете по рекламным баннерам, чтобы помочь мне осуществить мечту!</p>
-      <p>Эта страница будет развиваться — я хочу превратить её в мой личный уголок в этой тёмной сети интернета.</p>
+      <p>Я бы хотел набрать 1 миллион подписчиков на YouTube и купить себе мощный компьютер.</p>
+      <p>Сейчас у меня комп с AliExpress за 10к, он еле работает.</p>
+      <p>Потому любая поддержка и клик по рекламе — это огромный вклад в мою мечту 🥹</p>
     </div>
 
     <div class="profile-section">
       <h2>Как со мной связаться</h2>
-      <p>Я всегда рад помочь! Если я не отвечаю сразу — не переживайте, пингуйте сколько угодно, я постараюсь ответить как только смогу!</p>
+      <p>Я всегда рад помочь! Пишите, пингуйте — постараюсь ответить как можно скорее.</p>
     </div>
 
     <div class="social-links">
@@ -197,8 +184,10 @@
   </div>
 
   <div class="ad-right">
-    <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-    <div class="coinzilla" style="margin-top: 10px;"></div>
+    <div id="frame" style="width: 120px;">
+      <iframe data-aa='2390656' src='//ad.a-ads.com/2390656?size=120x600' style='width:120px; height:600px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+      <a style="display: block; text-align: right; font-size: 12px" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2390656&source_type=ad_unit&partner=2390656">Advertise here</a>
+    </div>
   </div>
 </body>
 </html>
