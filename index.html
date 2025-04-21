@@ -21,7 +21,6 @@
     .ad-left, .ad-right {
       position: fixed;
       top: 20px;
-      width: 250px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -130,6 +129,7 @@
   </style>
 </head>
 <body>
+  <!-- Левый баннер 250x250 -->
   <div class="ad-left">
     <div id="frame" style="width:250px; height:auto;">
       <iframe data-aa='2391156' src='//ad.a-ads.com/2391156?size=250x250' style='width:250px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
@@ -137,6 +137,15 @@
     </div>
   </div>
 
+  <!-- Правая панель с новым баннером 200x200 -->
+  <div class="ad-right">
+    <div id="frame" style="width: 200px;">
+      <iframe data-aa='2391157' src='//ad.a-ads.com/2391157?size=200x200' style='width:200px; height:200px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+      <a style="display: block; text-align: right; font-size: 12px" id="frame-link" href="https://aads.com/campaigns/new/?source_id=2391157&source_type=ad_unit&partner=2391157">Advertise here</a>
+    </div>
+  </div>
+
+  <!-- Основной контент -->
   <div class="profile-container">
     <div class="profile-header">
       <img src="img1.jpg" alt="Аватар" class="avatar" />
@@ -180,13 +189,6 @@
       <a href="index.html">🏠 Главная</a>
       <a href="games.html">🎮 Игры</a>
       <a href="chat.html">💬 Чат</a>
-    </div>
-  </div>
-
-  <div class="ad-right">
-    <div id="frame" style="width:250px; height:auto;">
-      <iframe data-aa='2391156' src='//ad.a-ads.com/2391156?size=250x250' style='width:250px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
-      <a style="display: block; text-align: right; font-size: 12px;" id="preview-link" href="https://aads.com/campaigns/new/?source_id=2391156&source_type=ad_unit&partner=2391156">Advertise here</a>
     </div>
   </div>
 </body>
