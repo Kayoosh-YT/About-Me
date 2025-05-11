@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>МяуГрам</title>
+  <title>MeowGram</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script>
     // Принудительная темная тема
@@ -13,7 +13,7 @@
 <body class="bg-gray-900 text-gray-100 dark">
   <!-- Заголовок -->
   <header class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
-    <h1 class="text-2xl font-bold text-center">МяуГрам</h1>
+    <h1 class="text-2xl font-bold text-center">MeowGram</h1>
   </header>
 
   <!-- Основной контент -->
@@ -31,20 +31,32 @@
 
     <!-- Галерея -->
     <section class="space-y-4">
-      <!-- Пост 1 -->
-      <div class="rounded overflow-hidden shadow bg-gray-800">
-        <img src="images/post/img1.png" alt="Солнечный день в Токио" class="w-full object-cover aspect-square">
-        <div class="p-2 flex justify-between text-sm text-white">
-          <span>1.2K ❤️</span>
-          <span>8.4K 👁️</span>
+
+      <!-- Пост с гифкой и облаком -->
+      <div class="relative rounded overflow-hidden shadow bg-gray-800">
+        <!-- Основное изображение поста -->
+        <img src="images/post/img1.png" alt="Пост с котиком" class="w-full object-cover aspect-square">
+        <div class="p-2 text-sm text-white">Согласитесь милый котик🐈</div>
+
+        <!-- Блок с персонажем и облаком -->
+        <div class="absolute bottom-2 right-2">
+          <!-- Кнопка-картинка персонажа -->
+          <button onclick="toggleBubble(this)" class="relative z-10 focus:outline-none">
+            <img src="images/cat.gif" alt="Котик" class="w-14 h-14 rounded-full border-2 border-white">
+          </button>
+
+          <!-- Облако с текстом -->
+          <div class="bubble hidden absolute bottom-16 right-0 w-56 bg-gray-700 text-white text-xs p-3 rounded-lg shadow-lg">
+            Кай очень любит котиков. Если ты пригласишь его в гости, и у тебя есть кот, то будь уверен — он пришёл к нему, а не к тебе 😸
+          </div>
         </div>
       </div>
+
       <!-- Пост 2 -->
       <div class="rounded overflow-hidden shadow bg-gray-800">
-        <img src="images/post/img5.png" alt="Ночной кибергород" class="w-full object-cover aspect-square">
+        <img src="images/post/img2.png" alt="Пост с храмом" class="w-full object-cover aspect-square">
         <div class="p-2 flex justify-between text-sm text-white">
-          <span>932 ❤️</span>
-          <span>5.7K 👁️</span>
+          <span>Как только вырасту то сразу туда перееду, обещаю самому себе</span>
         </div>
       </div>
     </section>
@@ -54,5 +66,13 @@
   <footer class="text-center text-xs text-gray-500 py-4">
     &copy; 2025 МяуГрам. Все права защищены.
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleBubble(button) {
+      const bubble = button.parentElement.querySelector('.bubble');
+      bubble.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
